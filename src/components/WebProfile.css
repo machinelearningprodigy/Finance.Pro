@@ -1,0 +1,354 @@
+.web-profile-container {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f5f5f5;
+  color: #333;
+  margin-top: 100px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.default-avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #4a0e8f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #4a0e8f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.5em;
+}
+
+.tab-navigation {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-navigation button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-navigation button.active {
+  color: #4a0e8f;
+}
+
+.tab-navigation button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #4a0e8f;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-section, .cards-section, .budget-section, .savings-section {
+  display: none;
+}
+
+.wallet-section.active, .cards-section.active, .budget-section.active, .savings-section.active {
+  display: block;
+}
+
+.balance-chart {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.balance h3 {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.balance h2 {
+  font-size: 2.5em;
+  margin: 0 0 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.actions button {
+  display: flex;
+  align-items: center;
+  background-color: #4a0e8f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: #3a0b6f;
+}
+
+.actions button svg {
+  margin-right: 10px;
+}
+
+.transactions {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.see-all {
+  color: #4a0e8f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.transactions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transactions li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transactions li:last-child {
+  border-bottom: none;
+}
+
+.transactions li > svg {
+  font-size: 1.5em;
+  margin-right: 15px;
+  color: #4a0e8f;
+}
+
+.amount {
+  margin-left: auto;
+  font-weight: bold;
+  color: red;
+}
+
+.amount.positive {
+  color: green;
+}
+
+.cards-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.card {
+  background-color: #4a0e8f;
+  color: white;
+  border-radius: 15px;
+  padding: 30px;
+  min-width: 350px;
+  position: relative;
+}
+
+.card-type {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2em;
+}
+
+.card-number {
+  font-size: 1.4em;
+  margin-bottom: 30px;
+}
+
+.card-name {
+  margin-bottom: 20px;
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2em;
+}
+
+.spending-limit {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.limit-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* New CSS for Budget Section */
+.budget-overview {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.budget-overview h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.budget-summary {
+  margin-top: 30px;
+}
+
+.budget-summary h3 {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.budget-summary h2 {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+/* New CSS for Savings Section */
+.savings-overview {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.savings-overview h3 {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.savings-overview h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.add-savings {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.add-savings h3 {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.add-savings button {
+  margin-top: 20px;
+  background-color: #4a0e8f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-savings button:hover {
+  background-color: #3a0b6f;
+}
+
+@media (max-width: 768px) {
+  .web-profile-container {
+    padding: 20px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .actions button {
+    flex: 1 0 calc(50% - 5px);
+  }
+
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

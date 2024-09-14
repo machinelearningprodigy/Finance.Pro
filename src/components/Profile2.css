@@ -1,0 +1,434 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+.qpay-dashboard {
+  @apply bg-gray-100 min-h-screen font-sans;
+}
+
+/* Sidebar styles */
+.sidebar {
+  @apply bg-white w-64 h-full fixed left-0 top-0 p-6 shadow-lg;
+}
+
+.sidebar-logo {
+  @apply text-2xl font-bold text-blue-600 mb-8;
+}
+
+.sidebar-nav {
+  @apply space-y-4;
+}
+
+.sidebar-nav-item {
+  @apply flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-200;
+}
+
+.sidebar-nav-item.active {
+  @apply text-blue-600 font-semibold;
+}
+
+.sidebar-nav-icon {
+  @apply mr-3 text-lg;
+}
+
+.sidebar-promo {
+  @apply bg-blue-600 text-white rounded-lg p-4 mt-8;
+}
+
+.sidebar-promo-title {
+  @apply text-lg font-semibold mb-2;
+}
+
+.sidebar-promo-text {
+  @apply text-sm mb-4;
+}
+
+.sidebar-promo-button {
+  @apply bg-white text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-100 transition-colors duration-200;
+}
+
+/* Main content styles */
+.main-content {
+  @apply ml-64 p-8;
+}
+
+/* Header styles */
+.header {
+  @apply flex justify-between items-center mb-8;
+}
+
+.search-bar {
+  @apply relative;
+}
+
+.search-input {
+  @apply w-96 pl-10 pr-4 py-2 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400;
+}
+
+.user-info {
+  @apply flex items-center space-x-4;
+}
+
+.user-avatar {
+  @apply w-8 h-8 rounded-full;
+}
+
+.user-name {
+  @apply text-sm font-medium text-gray-700;
+}
+
+/* Balance card styles */
+.balance-card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.balance-card-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.balance-card-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.balance-amount {
+  @apply text-3xl font-bold text-gray-900 mb-2;
+}
+
+.balance-change {
+  @apply text-sm font-medium;
+}
+
+.balance-change.positive {
+  @apply text-green-500;
+}
+
+.balance-change.negative {
+  @apply text-red-500;
+}
+
+/* Daily limit styles */
+.daily-limit {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.daily-limit-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.daily-limit-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.daily-limit-progress {
+  @apply w-full bg-blue-200 rounded-full h-2.5 mb-2;
+}
+
+.daily-limit-bar {
+  @apply bg-blue-600 h-2.5 rounded-full;
+}
+
+.daily-limit-text {
+  @apply text-sm text-gray-600 text-right;
+}
+
+/* Wallet styles */
+.wallet {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.wallet-card {
+  @apply bg-blue-600 text-white rounded-lg p-6 mb-4;
+}
+
+.wallet-card-number {
+  @apply text-xl font-mono mb-4;
+}
+
+.wallet-card-balance {
+  @apply text-2xl font-bold mb-2;
+}
+
+.wallet-card-type {
+  @apply text-sm font-medium text-right;
+}
+
+.wallet-actions {
+  @apply grid grid-cols-4 gap-2;
+}
+
+.wallet-action-button {
+  @apply flex flex-col items-center justify-center p-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors duration-200;
+}
+
+.wallet-action-icon {
+  @apply text-gray-600 mb-1;
+}
+
+.wallet-action-text {
+  @apply text-xs text-gray-700;
+}
+
+/* Operations styles */
+.operations {
+  @apply bg-white rounded-lg shadow-md;
+}
+
+.operations-header {
+  @apply flex justify-between items-center p-6 border-b border-gray-200;
+}
+
+.operations-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.operations-table {
+  @apply w-full;
+}
+
+.operations-table th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.operations-table td {
+  @apply px-6 py-4 whitespace-nowrap;
+}
+
+.operations-date {
+  @apply text-sm text-gray-900;
+}
+
+.operations-time {
+  @apply text-xs text-gray-500;
+}
+
+.operations-type {
+  @apply text-sm text-gray-900;
+}
+
+.operations-amount {
+  @apply text-sm font-medium;
+}
+
+.operations-amount.positive {
+  @apply text-green-600;
+}
+
+.operations-amount.negative {
+  @apply text-red-600;
+}
+
+/* Spending chart styles */
+.spending-chart {
+  @apply bg-white rounded-lg shadow-md p-6 mb-6;
+}
+
+.spending-chart-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.spending-chart-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+/* Quick transfer styles */
+.quick-transfer {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.quick-transfer-title {
+  @apply text-lg font-semibold text-gray-800 mb-4;
+}
+
+.quick-transfer-input {
+  @apply w-full mb-4;
+}
+
+.quick-transfer-amount {
+  @apply flex mb-4;
+}
+
+.quick-transfer-amount input {
+  @apply flex-grow mr-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.quick-transfer-amount select {
+  @apply w-24 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.quick-transfer-button {
+  @apply w-full bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition-colors duration-200;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sidebar {
+    @apply w-20;
+  }
+
+  .sidebar-nav-item span {
+    @apply hidden;
+  }
+
+  .main-content {
+    @apply ml-20;
+  }
+
+  .search-input {
+    @apply w-64;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    @apply ml-0 pt-20;
+  }
+
+  .header {
+    @apply fixed top-0 left-0 right-0 bg-white z-10 px-4 py-2;
+  }
+
+  .search-bar {
+    @apply hidden;
+  }
+
+  .balance-cards,
+  .daily-limit-wallet,
+  .operations-quick-transfer {
+    @apply grid-cols-1;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Tooltips */
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+/* Custom focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  @apply relative inline-block;
+}
+
+.dropdown-content {
+  @apply hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5;
+}
+
+.dropdown:hover .dropdown-content {
+  @apply block;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100;
+}
+
+/* Card hover effects */
+.hover-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-card:hover {
+  @apply transform -translate-y-1 shadow-lg;
+}
+
+/* Loading skeleton styles */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+.skeleton-text {
+  @apply h-4 bg-gray-200 rounded;
+}
+
+.skeleton-circle {
+  @apply rounded-full bg-gray-200;
+}
+
+/* Toast notification styles */
+.toast {
+  @apply fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm;
+}
+
+.toast-success {
+  @apply bg-green-500 text-white;
+}
+
+.toast-error {
+  @apply bg-red-500 text-white;
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-50;
+}
+
+.modal-container {
+  @apply fixed inset-0 z-50 flex items-center justify-center;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl p-6 max-w-lg w-full mx-4;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    @apply hidden;
+  }
+
+  .print-only {
+    @apply block;
+  }
+
+  body {
+    @apply text-black bg-white;
+  }
+}

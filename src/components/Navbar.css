@@ -1,0 +1,97 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 60%; /* Adjust the width as needed */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(41, 38, 38, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    margin-top: 20px;
+}
+
+/* Centering the logo and links */
+.logo {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+}
+
+/* Ensure the logo link has no underline and inherits logo styles */
+.logo-link {
+    color: inherit;  /* Inherit color from parent (white) */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.logo-link:hover {
+    color: inherit;  /* Prevent hover from changing color */
+}
+
+/* Navigation links styles */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    text-decoration: none; /* Ensure no underline */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+/* Call button specific styles */
+.call-button {
+    background-color: red;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Ensure no underline */
+}
+
+.call-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Navbar */
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        width: 90%;
+    }
+
+    /* Adjust for small screens */
+    .nav-links {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .logo {
+        font-size: 1.3em; /* Reduce logo size */
+    }
+}
