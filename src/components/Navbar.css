@@ -2,7 +2,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    width: 60%; /* Adjust the width as needed */
+    width: 60%;
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -15,7 +15,7 @@
     margin-top: 20px;
 }
 
-/* Centering the logo and links */
+/* Centering the logo and links */ 
 .logo {
     font-size: 1.5em;
     font-weight: 600;
@@ -24,12 +24,12 @@
 
 /* Ensure the logo link has no underline and inherits logo styles */
 .logo-link {
-    color: inherit;  /* Inherit color from parent (white) */
-    text-decoration: none; /* Remove underline from link */
+    color: inherit;
+    text-decoration: none;
 }
 
 .logo-link:hover {
-    color: inherit;  /* Prevent hover from changing color */
+    color: inherit;
 }
 
 /* Navigation links styles */
@@ -50,12 +50,16 @@
     padding: 8px 12px;
     transition: all 0.3s ease;
     border-radius: 5px;
-    text-decoration: none; /* Ensure no underline */
+    text-decoration: none;
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(116, 209, 243, 0.685);
     color: black;
+}
+
+.right-icon {
+    /* Optional additional styles for other icons */
 }
 
 /* Call button specific styles */
@@ -66,12 +70,18 @@
     color: white;
     display: flex;
     align-items: center;
-    text-decoration: none; /* Ensure no underline */
+    text-decoration: none;
 }
 
 .call-button:hover {
     background-color: white;
     color: black;
+}
+
+/* Mirrored and spaced icon for call button */
+.call-button .right-icon {
+    transform: scaleX(-1); /* Mirrors the icon */
+    margin-left: 8px; /* Adds space between text and icon */
 }
 
 /* Responsive Navbar */
@@ -88,10 +98,10 @@
 
     /* Adjust for small screens */
     .nav-links {
-        gap: 10px; /* Reduce gap for smaller screens */
+        gap: 10px;
     }
 
     .logo {
-        font-size: 1.3em; /* Reduce logo size */
+        font-size: 1.3em;
     }
 }

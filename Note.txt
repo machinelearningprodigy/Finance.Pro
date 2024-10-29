@@ -1,0 +1,11 @@
+Profile file is good
+WebProfile is Modern
+Profile2 is Dumb
+
+Choose whatever you can
+
+Report is good
+But there is problem with that somethings. UPon removing that compoenet background of Profile, Dashbiard looks nice but uppon applying Report it is turning backgrounds to white ...see this issue LATER
+
+
+I do not know why but Report file CSS is controlling everypage CSS

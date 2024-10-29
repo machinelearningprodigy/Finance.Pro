@@ -1,9 +1,7 @@
-// avaantivirus2021@gmail.com
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhone, FaTachometerAlt, FaUserAlt, FaRegCalendarAlt, FaChartBar } from 'react-icons/fa';
+import { MdAccountCircle } from "react-icons/md";
 import './Navbar.css';  // Import the CSS for Navbar
 
 function Navbar() {
@@ -14,11 +12,13 @@ function Navbar() {
         <Link to="/" className="logo-link">FinancePro</Link>
       </div>
       <ul className="nav-links">
-        <li><Link to="/dashboard"><FaTachometerAlt /> Dashboard</Link></li>
-        <li><Link to="/profile"><FaUserAlt /> Profile</Link></li>
-        <li><Link to="/plan"><FaRegCalendarAlt /> Plans</Link></li>
-        <li><Link to="/report"><FaChartBar /> Report</Link></li>
-        <li className="call-button"><FaPhone /> Contact Us</li>
+        <li><Link to="/dashboard">Dashboard <FaTachometerAlt className="right-icon" /></Link></li>
+        <li><Link to="/profile">Profile <FaUserAlt className="right-icon" /></Link></li>
+        <li><Link to="/plan">Plans <FaRegCalendarAlt className="right-icon" /></Link></li>
+        <li><Link to="/report">Report <FaChartBar className="right-icon" /></Link></li>
+        <li className="call-button">Contact Us <FaPhone className="right-icon" /></li>
+        {/* <li><Link to="/signup">Login <MdAccountCircle className="right-icon" /></Link></li> */}
+
       </ul>
     </nav>
   );

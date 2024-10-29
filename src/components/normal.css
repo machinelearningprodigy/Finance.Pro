@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --google-color: #ea4335;
+  --google-hover: #d62516;
+  --background-color: #f3f4f6;
+  --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  --input-background: #f9fafb;
+  --input-border: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+}

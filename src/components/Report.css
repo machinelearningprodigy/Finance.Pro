@@ -4,9 +4,9 @@
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
   --accent-color: #e74c3c;
-  --background-color: #f5f7fa;
+  --background-color: #1A1A2E;
   --text-color: #34495e;
-  --card-background: #ffffff;
+  --card-background: #16213E;
   --border-color: #e0e0e0;
   --hover-color: #3e84b3;
   --shadow-color: rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -83,6 +83,7 @@ button {
   border-radius: 5px;
   font-size: 1rem;
   transition: all 0.3s ease;
+  background-color: rgba(219, 219, 219, 0.932);
 }
 
 input[type="date"]:focus,
@@ -90,6 +91,8 @@ select:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  background-color: rgba(219, 219, 219, 0.932);
+
 }
 
 button {
@@ -147,14 +150,26 @@ button:hover {
   gap: 0.5rem;
 }
 
-.search input,
-.category-filter select {
+.search input{
   padding: 0.5rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: 5px;
   font-size: 1rem;
   transition: all 0.3s ease;
+  background-color: rgba(219, 219, 219, 0.932);
+
 }
+
+.category-filter select {
+  padding: 0.15rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  background-color: rgba(219, 219, 219, 0.932);
+}
+
+
 
 .search input:focus,
 .category-filter select:focus {
@@ -335,7 +350,7 @@ tr:nth-child(even) {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {

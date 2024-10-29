@@ -14,7 +14,7 @@ import './Advisor.css';
 const Advisor = () => {
   return (
     <div className="advisor-section">
-      <h2 className="advisor-heading">How can our financial advisor help you?</h2>
+      <h2 className="advisor-heading">How Can Our <span className='highlight'>Financial Advisor</span>  Help You?</h2>
 
       <div className="advisor-services">
         {/* Service Cards */}

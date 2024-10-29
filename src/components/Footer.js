@@ -7,10 +7,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section about">
-          <h3>FinancePlus</h3>
+          <h3>FinancePro</h3>
           <p>CIN No: ABCD12345PXYZ678</p>
-          <p>Registered Office: 123 Finance Street, Wealth City, ABC 789001</p>
-          <p>Corporate Office: 456 Money Ave, Capital Park, DEF 654321</p>
+          <p>Registered Office: Guwahati, Panbazar, Wealth Kamrup Metro, Assam 781009</p>
+          <p>Corporate Office: Sarojini Nagar, New Delhi, 657231</p>
         </div>
 
         <div className="footer-section links">
