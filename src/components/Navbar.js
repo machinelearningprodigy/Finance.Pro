@@ -16,7 +16,7 @@ function Navbar() {
         <li><Link to="/profile">Profile <FaUserAlt className="right-icon" /></Link></li>
         <li><Link to="/plan">Plans <FaRegCalendarAlt className="right-icon" /></Link></li>
         <li><Link to="/report">Report <FaChartBar className="right-icon" /></Link></li>
-        <li className="call-button">Contact Us <FaPhone className="right-icon" /></li>
+        <li><Link to="/contact">Contact Us <FaPhone className="right-icon" /></Link></li>
         {/* <li><Link to="/signup">Login <MdAccountCircle className="right-icon" /></Link></li> */}
 
       </ul>

@@ -16,22 +16,42 @@ const Footer = () => {
         <div className="footer-section links">
           <h3>Quick Links</h3>
           <ul>
-            <li>Financial Planning</li>
-            <li>Investment Advice</li>
-            <li>Tax Planning</li>
-            <li>Insurance Guidance</li>
-            <li>Retirement Planning</li>
+            <li>
+              <a href="http://localhost:3000/advisor-planning/income-expense-planning">
+                Financial Planning
+              </a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/advisor-planning/investment-planning">
+                Investment Advice
+              </a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/advisor-planning/income-tax-planning">
+                Tax Planning
+              </a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/advisor-planning/insurance-planning">
+                Insurance Guidance
+              </a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/advisor-planning/savings-planning">
+                Retirement Planning
+              </a>
+            </li>
           </ul>
         </div>
 
         <div className="footer-section links">
           <h3>Resources</h3>
           <ul>
-            <li>FAQs</li>
-            <li>Blog</li>
-            <li>Events</li>
-            <li>Community</li>
-            <li>Contact Us</li>
+            <li><a href="http://localhost:3000/faq">FAQs</a></li> {/* Added FAQ link */}
+            <li><a href="http://localhost:3000/blog">Blogs</a></li>
+            <li><a href="http://localhost:3000/event">Events</a></li>
+            <li><a href="http://localhost:3000/community">Community</a></li>
+            <li><a href="http://localhost:3000/contact">Contact Us</a></li>
           </ul>
         </div>
 
@@ -51,13 +71,23 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="social-icons">
-          <FaFacebookF className="social-icon" style={{ color: '#3b5998' }} />
-          <FaTwitter className="social-icon" style={{ color: '#00acee' }} />
-          <FaInstagram className="social-icon" style={{ color: '#C13584' }} />
-          <FaLinkedinIn className="social-icon" style={{ color: '#0072b1' }} />
-          <FaYoutube className="social-icon" style={{ color: '#FF0000' }} />
+          <a href="https://www.facebook.com/vanki.shylla" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF className="social-icon" style={{ color: '#3b5998' }} />
+          </a>
+          <a href="https://x.com/NitishM66803568" target="_blank" rel="noopener noreferrer">
+            <FaTwitter className="social-icon" style={{ color: '#00acee' }} />
+          </a>
+          <a href="https://www.instagram.com/?deoia=1" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="social-icon" style={{ color: '#C13584' }} />
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FaLinkedinIn className="social-icon" style={{ color: '#0072b1' }} />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <FaYoutube className="social-icon" style={{ color: '#FF0000' }} />
+          </a>
         </div>
-        <p>© 2024 FinancePlus. All Rights Reserved | <a href="/">Privacy Policy</a> | <a href="/">Terms of Use</a></p>
+        <p>© 2024 FinancePro. All Rights Reserved | <a href="/">Privacy Policy</a> | <a href="/">Terms of Use</a></p>
       </div>
     </footer>
   );

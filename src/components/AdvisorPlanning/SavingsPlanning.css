@@ -1,0 +1,103 @@
+/* General page styles */
+.savings-planning {
+    padding: 40px;
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .page-heading {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #4CAF50; /* Green */
+  }
+  
+  .intro-text {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Step Cards */
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .step-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .step-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .step-icon {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+  }
+  
+  .step-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .step-card p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+  }
+  
+  /* Call to Action */
+  .cta {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .cta-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensures the button is treated as inline content */
+    margin: 0 auto; /* Centers the button horizontally */
+  }
+  
+  .cta-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  }
+  

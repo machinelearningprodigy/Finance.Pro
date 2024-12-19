@@ -1,0 +1,217 @@
+/* FAQPage.css */
+.faq-page {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .faq-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+  }
+  
+  .faq-header h1 {
+    margin-top: 60px;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .faq-header p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .faq-item {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .faq-item.active {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-item.active .faq-title {
+    background-color: #f8f9fa;
+  }
+  
+  .title-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    color: #0066cc;
+  }
+  
+  .faq-title h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.active .toggle-button {
+    transform: rotate(180deg);
+    color: #0066cc;
+  }
+  
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .faq-content.show {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+  
+  .content-inner {
+    padding: 0 1.5rem 1.5rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+  
+  .content-inner p {
+    margin: 0.5rem 0;
+  }
+  
+  .faq-footer {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .faq-footer h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+  
+  .faq-footer p {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* .contact-button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #0052a3;
+  } */
+  
+  /* Animation keyframes */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .faq-content.show .content-inner {
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .faq-header h1 {
+      font-size: 2rem;
+    }
+  
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .faq-header h1 {
+      font-size: 1.75rem;
+    }
+  
+    .title-left {
+      gap: 0.75rem;
+    }
+  
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .faq-title h3 {
+      font-size: 1rem;
+    }
+  }

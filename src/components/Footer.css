@@ -1,3 +1,4 @@
+/* Footer general styles remain the same */
 .footer {
     background-color: #000;
     color: #fff;
@@ -43,6 +44,18 @@
     margin-bottom: 10px;
 }
 
+/* For the Quick Links section */
+.footer-section.links ul li a {
+    color: #fff; /* Keep the text color white */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.footer-section.links ul li a:hover {
+    color: #87CEFA; /* Light Sky color on hover */
+}
+
+/* Download section styles */
 .download .app-badges {
     display: flex;
     gap: 15px;
@@ -54,6 +67,7 @@
     height: auto;
 }
 
+/* Footer bottom section */
 .footer-bottom {
     border-top: 1px solid #333;
     padding-top: 20px;
