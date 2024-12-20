@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LandingPage.css';
 import { FaStar, FaUserAlt, FaRocket, FaChartLine, FaMoneyBillWave } from 'react-icons/fa';
+import { MdWarning } from 'react-icons/md';
 
 const videos = [
   '/videos/video1.mp4',
   '/videos/video1.mp4',
   '/videos/video1.mp4',
-  '/videos/video1.mp4'
+  '/videos/video1.mp4',
 ];
 
 function VideoBackground() {
@@ -15,7 +17,7 @@ function VideoBackground() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentVideo((prevVideo) => (prevVideo + 1) % videos.length);
-    }, 10000); // Change video every 10 seconds
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -31,27 +33,25 @@ function TypingEffect() {
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
-  const [speed, setSpeed] = useState(200); // Initial typing speed
+  const [speed, setSpeed] = useState(200);
 
   useEffect(() => {
     const handleTyping = () => {
       if (!isDeleting) {
-        // Typing phase
         setDisplayedText(fullText.slice(0, index + 1));
         setIndex(index + 1);
 
         if (index + 1 === fullText.length) {
-          setIsDeleting(true); // Start deleting when fully typed
-          setSpeed(30); // Faster deleting speed
+          setIsDeleting(true);
+          setSpeed(30);
         }
       } else {
-        // Deleting phase
         setDisplayedText(fullText.slice(0, index - 1));
         setIndex(index - 1);
 
         if (index === 0) {
-          setIsDeleting(false); // Start typing again
-          setSpeed(200); // Reset to typing speed
+          setIsDeleting(false);
+          setSpeed(200);
         }
       }
     };
@@ -68,8 +68,8 @@ function TypingEffect() {
       {displayedText.split(" ").map((word, i) => (
         <span key={i}>
           {word}
-          {i !== displayedText.split(" ").length - 1 ? " " : ""}
-          {i === 3 ? <br /> : null} {/* Add line break after the third word */}
+          {i !== displayedText.split(" ").length - 1 ? " " : ""} {/* Space between words */}
+          {i === 3 ? <br /> : null} {/* Line break after the third word */}
         </span>
       ))}
     </h1>
@@ -77,11 +77,35 @@ function TypingEffect() {
 }
 
 function LandingPage() {
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+  const [showSignoutDialog, setShowSignoutDialog] = useState(false);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    setUser(storedUser ? JSON.parse(storedUser) : null);
+  }, []);
+
+  const handleGetStarted = () => {
+    navigate('/signup');
+  };
+
+  const handleLearnMore = () => {
+    navigate('/login');
+  };
+
+  const handleSignOutClick = () => {
+    setShowSignoutDialog(true);
+  };
+
+  const handleCancelSignout = () => {
+    setShowSignoutDialog(false);
+  };
+
   return (
     <div className="app">
       <VideoBackground />
       <div className="main-content">
-        {/* Icon Section */}
         <div className="icon-section">
           <div className="icons">
             <div className="icon user-icon"><FaUserAlt /></div>
@@ -99,13 +123,46 @@ function LandingPage() {
           <div className="text">200+ brands scaled</div>
         </div>
 
-        {/* Typing Effect */}
         <TypingEffect />
         <div className="cta-buttons">
-          <button className="cta-button-red">Get Started</button>
-          <button className="cta-button-white">Learn More</button>
+          {!user ? (
+            <>
+              <button className="cta-button-red" onClick={handleGetStarted}>Sign Up</button>
+              <button className="cta-button-white" onClick={handleLearnMore}>Login</button>
+            </>
+          ) : (
+            <div>
+              <p>
+                You are logged in as <strong>{user.name}</strong>
+              </p>
+              <button className="cta-button-white" onClick={handleSignOutClick}>Sign Out</button>
+            </div>
+          )}
         </div>
       </div>
+
+      {showSignoutDialog && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <div className="modal-icon">
+              <MdWarning />
+            </div>
+            <h2>Confirm Sign Out</h2>
+            <p>Are you sure you want to sign out?</p>
+            <div className="modal-buttons">
+              <button className="cancel-button" onClick={handleCancelSignout}>Cancel</button>
+              <button className="confirm-button" onClick={() => {
+                // Clear the user session and remove user data
+                localStorage.removeItem('user');
+                localStorage.removeItem('token');
+                setUser(null);
+                setShowSignoutDialog(false);
+                navigate('/login');
+              }}>Yes, Sign Out</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

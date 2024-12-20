@@ -1,0 +1,265 @@
+.community-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.community-header {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.community-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000000;
+}
+
+.notification-bell {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+}
+
+.community-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card svg {
+  font-size: 2rem;
+  color: #2ecc71;
+  margin-bottom: 0.5rem;
+}
+
+.community-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.community-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.community-tabs button.active {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: none;
+  margin: 0 0.75rem;
+  font-size: 1rem;
+}
+
+.search-icon, .filter-icon {
+  color: #666;
+  cursor: pointer;
+}
+
+.topics-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.topic-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topic-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  background-color: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+}
+
+.topic-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #666;
+}
+
+.topic-stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.share-icon, .bookmark-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.finance-tips-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.tip-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tip-icon {
+  font-size: 2rem;
+  color: #2ecc71;
+}
+
+.tip-category {
+  display: inline-block;
+  background-color: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.upvote-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upvote-btn:hover {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.leaderboard-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-container h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.rank {
+  font-weight: bold;
+  width: 40px;
+}
+
+.user-name {
+  flex: 1;
+}
+
+.points {
+  color: #2ecc71;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.badge {
+  background-color: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .community-container {
+    padding: 1rem;
+  }
+
+  .community-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .community-tabs {
+    flex-direction: column;
+  }
+
+  .topic-stats {
+    flex-wrap: wrap;
+  }
+}

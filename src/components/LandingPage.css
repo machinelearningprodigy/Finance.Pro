@@ -46,24 +46,60 @@ body {
 .main-content {
   text-align: center;
   margin-top: 150px;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
   font-size: 2.5em;
   font-weight: 900;
   margin-bottom: 20px;
-  white-space: normal; /* Allow text to wrap */
-  line-height: 1.4em; /* Line height for wrapped text */
+  white-space: normal;
+  line-height: 1.4em;
 }
 
 /* Typing Effect */
 .typing-effect {
   font-size: 2.5em;
   font-weight: 900;
-  white-space: normal; /* Allows text to break lines */
+  white-space: normal;
   overflow: hidden;
-  border-right: 3px solid transparent; /* Removing cursor */
+  border-right: 3px solid transparent;
   animation: none;
+}
+
+/* Welcome Message */
+.welcome-message {
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out, slideDown 1.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-message strong {
+  font-size: 2rem;
+  color: #ff6b6b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* CTA Buttons */
@@ -71,9 +107,12 @@ h1 {
   display: flex;
   gap: 20px;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
-.cta-button-red {
+.cta-button-red,
+.cta-button-white {
   background-color: rgba(255, 0, 0, 0.904);
   color: white;
   border: none;
@@ -81,24 +120,26 @@ h1 {
   border-radius: 5px;
   font-size: 1em;
   font-weight: 600;
-  cursor: pointer;
+  text-align: center;
 }
 
 .cta-button-white {
   background-color: rgba(255, 255, 255, 0.918);
   color: black;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
 }
 
-.cta-button-red:hover,
-.cta-button-white:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Center Aligned Sign Out Button */
+.signout-button {
+  display: block;
+  margin: 1rem auto 0;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
 }
 
 /* Icon Section */
@@ -125,7 +166,7 @@ h1 {
   border-radius: 50%;
   font-size: 1em;
   position: relative;
-  margin-left: -10px; /* Adjust this value for more or less overlap */
+  margin-left: -10px;
 }
 
 .icon-section .user-icon {
@@ -165,6 +206,7 @@ h1 {
   color: white;
   font-weight: 600;
 }
+
 
 /* Responsiveness */
 @media only screen and (max-width: 1024px) {
