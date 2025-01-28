@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section about">
           <h3>FinancePro</h3>
-          <p>CIN No: ABCD12345PXYZ678</p>
+          {/* <p>CIN No: ABCD12345PXYZ678</p> */}
           <p>Registered Office: Guwahati, Panbazar, Wealth Kamrup Metro, Assam 781009</p>
           <p>Corporate Office: Sarojini Nagar, New Delhi, 657231</p>
         </div>
@@ -17,27 +17,27 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <a href="http://localhost:3000/advisor-planning/income-expense-planning">
+              <a href="https://finance-pro-xi.vercel.app/advisor-planning/income-expense-planning">
                 Financial Planning
               </a>
             </li>
             <li>
-              <a href="http://localhost:3000/advisor-planning/investment-planning">
+              <a href="https://finance-pro-xi.vercel.app/advisor-planning/investment-planning">
                 Investment Advice
               </a>
             </li>
             <li>
-              <a href="http://localhost:3000/advisor-planning/income-tax-planning">
+              <a href="https://finance-pro-xi.vercel.app/advisor-planning/income-tax-planning">
                 Tax Planning
               </a>
             </li>
             <li>
-              <a href="http://localhost:3000/advisor-planning/insurance-planning">
+              <a href="https://finance-pro-xi.vercel.app/advisor-planning/insurance-planning">
                 Insurance Guidance
               </a>
             </li>
             <li>
-              <a href="http://localhost:3000/advisor-planning/savings-planning">
+              <a href="https://finance-pro-xi.vercel.app/advisor-planning/savings-planning">
                 Retirement Planning
               </a>
             </li>
@@ -47,18 +47,17 @@ const Footer = () => {
         <div className="footer-section links">
           <h3>Resources</h3>
           <ul>
-            <li><a href="http://localhost:3000/faq">FAQs</a></li> {/* Added FAQ link */}
-            <li><a href="http://localhost:3000/blog">Blogs</a></li>
-            <li><a href="http://localhost:3000/event">Events</a></li>
-            <li><a href="http://localhost:3000/community">Community</a></li>
-            <li><a href="http://localhost:3000/contact">Contact Us</a></li>
+            <li><a href="https://finance-pro-xi.vercel.app/faq">FAQs</a></li>
+            <li><a href="https://finance-pro-xi.vercel.app/blog">Blogs</a></li>
+            <li><a href="https://finance-pro-xi.vercel.app/event">Events</a></li>
+            <li><a href="https://finance-pro-xi.vercel.app/community">Community</a></li>
+            <li><a href="https://finance-pro-xi.vercel.app/contact">Contact Us</a></li>
           </ul>
         </div>
 
         <div className="footer-section download">
           <h3>Download the App</h3>
           <div className="app-badges">
-            {/* Corrected App Store Image */}
             <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
             </a>

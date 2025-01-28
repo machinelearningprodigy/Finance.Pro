@@ -33,7 +33,7 @@ const Signout = () => {
       localStorage.removeItem('user');
       
       // Optional: Call backend to invalidate token
-      await fetch('http://localhost:5000/api/auth/logout', {
+      await fetch('https://financepro-backend.onrender.com/api/auth/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
